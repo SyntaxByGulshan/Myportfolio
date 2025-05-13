@@ -10,13 +10,14 @@ window.addEventListener("resize", () => {
 
   return (
     <>
-      <nav className=" md:w-full md:h-20 md:fixed  md:flex md:flex-row md:shadow-xl  md:items-center md:justify-between md:right-0 md:left-0 md:z-10  ">
+    {/* this is navigation bar */}
+      <nav className=" md:w-screen md:h-20 md:fixed  md:flex md:flex-row md:shadow-xl  md:items-center md:justify-between md:right-0 md:left-0 md:z-10">
         {/* this div is for options */}
         <div>
           <div
             className={`${
               menuOpen
-                ? "text-blue-400 h-screen w-full absolute  flex flex-col items-center justify-center md:justify-center gap-8   backdrop-blur-lg md:static  md:flex  md:flex-row md:h-auto "
+                ? "text-blue-400 h-screen w-screen absolute  flex flex-col items-center justify-center  gap-8   backdrop-blur-lg md:static  md:flex  md:flex-row md:h-auto md:w-fit  md:gap-8  "
                 : "hidden  md:flex  md:flex-row md:gap-8 md:static  md:h-auto   md:text-blue-400 "
             }`}
           >
@@ -83,7 +84,7 @@ window.addEventListener("resize", () => {
           </div>
         </div>
 
-        <div className="bg-blue-950 w-full  flex items-center justify-between fixed  pl-10 pr-10 shadow-blue shadow-xl md:static md:w-fit md:shadow-none ">
+        <div className="bg-blue-950 w-screen  flex items-center justify-between fixed  pl-10 pr-10 shadow-blue shadow-xl md:static md:w-fit md:shadow-none ">
           {/* this is for LOGO */}
           <div className="">
             <Link to="">
@@ -93,7 +94,7 @@ window.addEventListener("resize", () => {
             </Link>
           </div>
           {/* this is options button */}
-          <div className="">
+          <div className="md:hidden">
             <div>
               <button
                 className="md:hidden text-2xl"

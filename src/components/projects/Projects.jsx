@@ -1,47 +1,67 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Projects = () => {
-  // const [repos, setRepos] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [repos, setRepos] = useState({});
 
-  // useEffect(() => {
-  //   const fetchRepos = async () => {
-  //     try {
-  //       const response = await fetch('https://api.github.com/users/SyntexByGulshan/repos');
-  //       const data = await response.json();
-  //       setRepos(data);
-  //     } catch (error) {
-  //       console.error('Error fetching repositories:', error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
+  
+    const fetchRepos = async () => {
+      try {
+        const response = await fetch(
+          'https://api.github.com/users/SyntaxByGulshan/repos'
+        );
+        const data = await response.json();
+        setRepos(data);
+        console.log(data);
+        console.log(typeof(data));
+      } catch (error) {
+        console.error("Error fetching repositories:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  //   fetchRepos();
-  // }, []);
+   useEffect(() => {
+    fetchRepos();
+  }
+  , []);
+  
 
   return (
-    // <div className="github-projects">
-    //   <h2>Your GitHub Projects</h2>
-    //   {loading ? (
-    //     <p>Loading repositories...</p>
-    //   ) : (
-    //     <div>
-    //       {repos.map((repo) => (
-    //         <div key={repo.id} className="repo-card">
-    //           <h3>{repo.name}</h3>
-    //           <p>{repo.description || 'No description available.'}</p>
-    //           <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-    //             View on GitHub
-    //           </a>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   )}
-    // </div>
-    <div>
-    still working on this
-    </div>
+    <>
+      <div className="h-screen bg-blue-950">
+        <div className="flex flex-col items-center justify-center h-full">
+          <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
+          {loading ? (
+            <p className="text-white">Loading...</p>
+          ) : (
+            <ol className=" text-white">
+              {repos.map((repo) => (
+                <li key={repo.id} className="mb-2">
+                  <div>
+                    <div>
+                      <a
+                    href={repo.html_url}
+                    className="text-blue-300 hover:underline"
+                  >
+                    name : {repo.name}
+                    {/* {repo.description } */}
+                  </a>
+                    </div>
+                    <div>
+                      <p className="text-gray-400">{repo.description}</p>
+                      <p className="text-gray-400">Language: {repo.language}</p>
+                    </div>
+                  
+                  </div>
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+
+      </div>
+    </>
   );
 };
 
