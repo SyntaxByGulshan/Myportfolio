@@ -11,7 +11,7 @@ window.addEventListener("resize", () => {
   return (
     <>
     {/* this is navigation bar */}
-      <nav className=" md:w-screen md:h-20 md:fixed  md:flex md:flex-row md:shadow-xl  md:items-center md:justify-between md:right-0 md:left-0 md:z-10">
+      <nav className=" md:w-screen md:h-20 md:fixed  md:flex md:flex-row md:shadow-xl  md:items-center md:justify-between md:right-0 md:left-0 md:z-10 md:bg-blue-950">
         {/* this div is for options */}
         <div>
           <div

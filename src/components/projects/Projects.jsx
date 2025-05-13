@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {motion} from "framer-motion";
 
 const Projects = () => {
   const [loading, setLoading] = useState(true);
@@ -25,35 +26,37 @@ const Projects = () => {
     fetchRepos();
   }
   , []);
-  
-
   return (
     <>
-      <div className="h-screen bg-blue-950">
-        <div className="flex flex-col items-center justify-center h-full">
-          <h1 className="text-4xl font-bold text-white mb-4">My Projects</h1>
+      <div className="min-h-screen bg-blue-950 border border-blue-950">
+        <div className="flex flex-col items-center justify-center gap-4   mt-20 md:mt-24">
+          <h1 className="text-4xl font-bold text-white">My Projects</h1>
           {loading ? (
             <p className="text-white">Loading...</p>
           ) : (
-            <ol className=" text-white">
+            <ol className=" text-white flex flex-col  gap-2 ">
               {repos.map((repo) => (
                 <li key={repo.id} className="mb-2">
-                  <div>
+                  <motion.div className=" p-2 rounded-lg shadow-md "
+                  initial={{ opacity: 0 ,y: 40 }}
+                  animate={{ opacity: 1,y: 0 }}
+                  transition={{ duration: 0.5,delay: 0.5}}
+                  >
                     <div>
                       <a
                     href={repo.html_url}
                     className="text-blue-300 hover:underline"
                   >
-                    name : {repo.name}
+                    Name : {repo.name}
                     {/* {repo.description } */}
                   </a>
                     </div>
                     <div>
-                      <p className="text-gray-400">{repo.description}</p>
+                      <p className="text-gray-400">Discraption: {repo.description}</p>
                       <p className="text-gray-400">Language: {repo.language}</p>
                     </div>
                   
-                  </div>
+                  </motion.div>
                 </li>
               ))}
             </ol>

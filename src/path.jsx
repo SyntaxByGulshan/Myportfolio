@@ -14,6 +14,7 @@ export default function Path(){
         <Route path="skills" element={<Skills/>} />
         <Route path="projects" element={<Projects/>}/>
         <Route path="resume" element={<Resume/>}/>
+        <Route path="contectme" element={<ContectMe/>}/>
          </Route>       
         </Routes>
         </BrowserRouter>

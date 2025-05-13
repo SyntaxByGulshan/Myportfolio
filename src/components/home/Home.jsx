@@ -14,7 +14,7 @@ export default function Home() {
         transition={{ duration:2 }} 
         >
           <img
-            className="h-72 md:h-80 w-auto rounded-full shadow-2xl hover:h-80 md:hover:h-96  shadow-blue-300 "
+            className="h-72 md:h-80 w-auto rounded-full shadow-2xl  shadow-blue-300 "
             src="img1.jpg"
             alt="photo"
           />
