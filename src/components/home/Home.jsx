@@ -65,7 +65,7 @@ export default function Home() {
         transition={{ duration: 1 }} 
           >
           <button>
-          Click to Contect
+          Click to Contact
           </button>
         </motion.div>
         </div>
