@@ -4,8 +4,8 @@ import {motion} from "framer-motion";
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen   bg-blue-950 flex flex-col md:flex-row-reverse justify-center items-center text-blue-100 gap-4
-      
+      <div className=" min-h-screen   bg-blue-950 flex flex-col md:flex-row-reverse justify-center items-center text-blue-100 gap-4 
+      bg-[url('Element.png')] bg-no-repeat bg-cover
       ">
         <div className=" mt-20 flex text-sm sm:text-base md:text-lg  flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-10">
           <motion.div className="   flex justify-center items-center "
@@ -15,7 +15,7 @@ export default function Home() {
         >
           <img
             className="h-72 md:h-80 w-auto rounded-full shadow-2xl  shadow-blue-300 "
-            src="img1.jpg"
+            src="IMG-20250630-WA0082.jpg"
             alt="photo"
           />
         </motion.div>
