@@ -4,10 +4,10 @@ import {motion} from "framer-motion";
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen w-screen bg-blue-950 flex flex-col md:flex-row-reverse justify-center items-center text-blue-100 gap-4
+      <div className="min-h-screen   bg-blue-950 flex flex-col md:flex-row-reverse justify-center items-center text-blue-100 gap-4
       
       ">
-        <div className=" m-4 mt-20 flex text-sm sm:text-base md:text-lg  flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-10">
+        <div className=" mt-20 flex text-sm sm:text-base md:text-lg  flex-col sm:flex-col md:flex-row lg:flex-row items-center justify-center gap-10">
           <motion.div className="   flex justify-center items-center "
         initial={{ opacity: 0,x:100 }}     // Start hidden and below
         animate={{ opacity: 1,x:0 }}       // Animate to visible and position
