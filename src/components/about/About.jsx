@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
+import SecondPhoto from "../costomHook/SecondPhoto";
 
 export default function About() {
   const navigate=useNavigate()
@@ -22,13 +23,7 @@ export default function About() {
           <div className="absolute -inset-3 rounded-3xl bg-blue-500/20 blur-3xl animate-pulse"></div>
 
           {/* Responsive Photo */}
-          <motion.img
-            className="h-64 w-48 sm:h-72 sm:w-56 md:h-96 md:w-80 rounded-3xl shadow-2xl shadow-black border  border-blue-700 relative z-10 object-cover"
-            src="/img1.jpg"
-            alt="photo"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <SecondPhoto/>
         </motion.div>
 
         {/* Content (Text + Button) */}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 import Typewriter from "typewriter-effect";
+import FirstPhoto from "../costomHook/FirstPhoto";
 
 export default function Hero() {
   const navigate=useNavigate()
@@ -28,12 +29,7 @@ export default function Hero() {
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
-          <img
-            className="h-52 w-52 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 
-                       object-cover rounded-2xl shadow-2xl border border-blue-950"
-            src="/IMG-20250630-WA0082.jpg"
-            alt="photo"
-          />
+          <FirstPhoto />
           {/* Subtle glow */}
           <div className="absolute inset-0 rounded-2xl border-4 border-blue-500 opacity-30"></div>
         </motion.div>
