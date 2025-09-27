@@ -113,7 +113,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <a href="/contectme">
+          <a href="contectme">
             {" "}
             <button>Contact Me</button>
           </a>
