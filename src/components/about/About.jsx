@@ -23,7 +23,7 @@ export default function About() {
 
           {/* Responsive Photo */}
           <motion.img
-            className="h-64 w-48 sm:h-72 sm:w-56 md:h-96 md:w-80 rounded-3xl shadow-2xl shadow-black border-4 border-blue-700 relative z-10 object-cover"
+            className="h-64 w-48 sm:h-72 sm:w-56 md:h-96 md:w-80 rounded-3xl shadow-2xl shadow-black border  border-blue-200 relative z-10 object-cover"
             src="/img1.jpg"
             alt="photo"
             animate={{ y: [0, -10, 0] }}

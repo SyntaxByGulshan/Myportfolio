@@ -2,8 +2,7 @@ import React from "react";
 const Css_logo =()=>{
     return(
         <div>
-        
-            <img src="\css_logo.png" className="h-20"/>
+            <img src="\typescript.png" className="h-20"/>
         </div>
 
     );

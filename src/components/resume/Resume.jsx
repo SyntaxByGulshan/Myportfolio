@@ -43,7 +43,7 @@ export default function Resume() {
           </div>
 
           {/* For medium and larger screens → Embed */}
-          <div className="hidden md:block w-full max-w-4xl h-[80vh] shadow-lg rounded overflow-hidden border border-blue-200">
+          <div className="hidden md:block w-full max-w-4xl h-[80vh] shadow-lg rounded overflow-hidden border border-blue-950 mt-24">
             <embed
               src="/Gulshan02.pdf"
               type="application/pdf"
