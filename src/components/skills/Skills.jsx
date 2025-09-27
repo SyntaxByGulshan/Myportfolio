@@ -25,8 +25,8 @@ const skills = [
 export default function Skills() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 
-                    flex flex-col items-center justify-center px-6 py-20 pt-24">
-      <h2 className="text-4xl  font-extrabold mb-12 text-center text-blue-200">
+                    flex flex-col items-center justify-center px-6 pt-24 ">
+      <h2 className="text-4xl  font-bold mb-12 text-center text-blue-200 p-2">
         My Skills
       </h2>
 
