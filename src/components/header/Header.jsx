@@ -1,111 +1,75 @@
-import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  // Detect screen size changes
-window.addEventListener("resize", () => { 
-    setMenuOpen(false); 
-});
-  
+
+  const navLinks = ["", "Skills", "Projects", "Resume", "About"];
 
   return (
-    <>
-    {/* this is navigation bar */}
-      <nav className=" md:w-screen md:h-20 md:fixed  md:flex md:flex-row md:shadow-xl  md:items-center md:justify-between md:right-0 md:left-0 md:z-10 md:bg-blue-950">
-        {/* this div is for options */}
-        <div>
-          <div
-            className={`${
-              menuOpen
-                ? "text-blue-400 h-screen w-screen absolute  flex flex-col items-center justify-center  gap-8   backdrop-blur-lg md:static  md:flex  md:flex-row md:h-auto md:w-fit  md:gap-8  "
-                : "hidden  md:flex  md:flex-row md:gap-8 md:static  md:h-auto   md:text-blue-400 "
-            }`}
-          >
-            <div className="md:pl-10 md:pr-4">
-              <NavLink
-                to=""
-                className={({ isActive }) =>
-                  isActive ? "text-blue-100 underline" : ""
-                }
-              >
-                <div className=" hover:text-blue-100 hover:underline" onClick={() => setMenuOpen(!menuOpen)}>
-                  Home
-                </div>
-              </NavLink>
-            </div>
-            <div className="md:pl-4 md:pr-4">
-              <NavLink
-                to="skills"
-                className={({ isActive }) =>
-                  isActive ? "text-blue-100 underline" : ""
-                }
-              >
-                <div className=" hover:text-blue-100 hover:underline" onClick={() => setMenuOpen(!menuOpen)}>
-                  Skills
-                </div>
-              </NavLink>
-            </div>
-            <div className="md:pl-4 md:pr-4">
-              <NavLink
-                to="projects"
-                className={({ isActive }) =>
-                  isActive ? "text-blue-100 underline" : ""
-                }
-              >
-                <div className=" hover:text-blue-100 hover:underline" onClick={() => setMenuOpen(!menuOpen)}>
-                  Projects
-                </div>
-              </NavLink>
-            </div>
-            <div className="md:pl-4 md:pr-4">
-              <NavLink
-                to="resume"
-                className={({ isActive }) =>
-                  isActive ? "text-blue-100 underline" : ""
-                }
-              >
-                <div className="  hover:text-blue-100 hover:underline " onClick={() => setMenuOpen(!menuOpen)}>
-                  Resume
-                </div>
-              </NavLink>
-            </div>
-            <div className="md:pl-4 md:pr-4">
-              <NavLink
-                to="about"
-                className={({ isActive }) =>
-                  isActive ? "text-blue-100 underline" : ""
-                }
-              >
-                <div className=" hover:text-blue-100 hover:underline" onClick={() => setMenuOpen(!menuOpen)}>
-                  About
-                </div>
-              </NavLink>
-            </div>
-          </div>
-        </div>
+    <nav className="w-full fixed top-0 left-0 bg-blue-950 shadow-xl z-20">
+      <div className="flex items-center justify-between px-6 md:px-10 min-h-16">
+        {/* Logo */}
+        <Link to="/">
+          <img className="h-16" src="\logo.png" alt="Logo" />
+        </Link>
 
-        <div className="bg-blue-950 w-screen  flex items-center justify-between fixed  pl-10 pr-10 shadow-blue shadow-xl md:static md:w-fit md:shadow-none ">
-          {/* this is for LOGO */}
-          <div className="">
-            <Link to="">
-              <div className="">
-                <img className="h-16" src="\logo.png" alt="G" />
-              </div>
-            </Link>
-          </div>
-          {/* this is options button */}
-          <div className="md:hidden">
-            <div>
-              <button
-                className="md:hidden text-2xl"
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                ☰
-              </button>
-            </div>
-          </div>
+        {/* Hamburger */}
+        <button
+          className="md:hidden text-3xl text-blue-100"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8">
+          {navLinks.map((path, idx) => (
+            <NavLink
+              key={idx}
+              to={path}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-100 underline"
+                  : "text-blue-400 hover:text-blue-100 hover:underline"
+              }
+            >
+              {path || "Home"}
+            </NavLink>
+          ))}
         </div>
-      </nav>
-    </>
+      </div>
+
+      {/* Mobile Slide-Out Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-blue-950 shadow-xl transform transition-transform duration-300 z-30
+                    ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="flex flex-col items-start mt-20 ml-6 gap-6">
+          {navLinks.map((path, idx) => (
+            <NavLink
+              key={idx}
+              to={path}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-100 underline text-lg"
+                  : "text-blue-400 hover:text-blue-100 hover:underline text-lg"
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {path || "Home"}
+            </NavLink>
+          ))}
+        </div>
+      </div>
+
+      {/* Overlay when menu is open */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-20"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
+    </nav>
   );
 }

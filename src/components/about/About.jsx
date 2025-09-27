@@ -1,52 +1,63 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 export default function About() {
   return (
-    // this id page of about
-    <div className="min-h-screen bg-blue-950  justify-center items-center text-blue-100 flex  flex-col ">
-      {/* this div contain photo and details */}
-      <div className=" m-4 mt-20  items-center justify-center gap-10 flex flex-col md:flex-row">
-        {/* this part is photo of self */}
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 md:p-12
+                    bg-gradient-to-b from-blue-900 via-blue-950 to-blue-800 text-blue-100">
+
+      {/* Container for Photo and Content */}
+      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mt-20 md:mt-24 w-full max-w-6xl">
+
+        {/* Photo with floating glow effect */}
         <motion.div
-          className=" flex items-center flex-initial flex-shrink"
-          initial={{ opacity: 0, x: -100 }} // Start hidden and below
-          animate={{ opacity: 1, x: 0 }} // Animate to visible and position
+          className="flex-shrink-0 relative"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <img
-            className="h-72 md:h-80 rounded-full shadow-2xl shadow-black "
+          {/* Glow behind photo */}
+          <div className="absolute -inset-3 rounded-3xl bg-blue-500/20 blur-3xl animate-pulse"></div>
+
+          {/* Responsive Photo */}
+          <motion.img
+            className="h-64 w-48 sm:h-72 sm:w-56 md:h-96 md:w-80 rounded-3xl shadow-2xl shadow-black border-4 border-blue-700 relative z-10 object-cover"
             src="img1.jpg"
             alt="photo"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
-        {/* this part is about me */}
+
+        {/* Content (Text + Button) */}
         <motion.div
-          className="w-1/2  flex items-center"
-          initial={{ opacity: 0, x: 100 }} // Start hidden and below
-          animate={{ opacity: 1, x: 0 }} // Animate to visible and position
+          className="flex-1 flex flex-col items-center md:items-start text-center md:text-left text-lg md:text-xl text-gray-300 leading-relaxed px-4 md:px-8 gap-6"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          "As a skilled web developer, I specialize in creating user-friendly,
-          responsive, and high-performance websites. Proficient in HTML, CSS,
-          JavaScript, React, and Node.js, I build seamless user experiences with
-          clean and scalable code. I’m driven by creativity, collaboration, and
-          a passion for innovative web solutions. Let’s bring ideas to life
-          together!"
-        </motion.div>
-      </div>
-      {/* this part is for contect details */}
+          <div>
+            <p className="mb-4">
+              As a skilled web developer, I specialize in creating user-friendly,
+              responsive, and high-performance websites. Proficient in HTML, CSS,
+              JavaScript, React, and Node.js, I build seamless user experiences with
+              clean and scalable code.
+            </p>
+            <p>
+              I’m driven by creativity, collaboration, and a passion for innovative web
+              solutions. Let’s bring ideas to life together!
+            </p>
+          </div>
 
-      <div className="">
-        {/* contect me button */}
-        <motion.div
-          className="  shadow-blue-900 shadow-2xl p-2 md:p-4 hover:shadow-blue-200"
-          initial={{ opacity: 0,y:100 }}     // Start hidden and below
-        animate={{ opacity: 1,y:0 }}       // Animate to visible and position
-        transition={{ duration: 1 }} 
-
-        >
-          <button>Click to Contect</button>
+          {/* Contact Button */}
+          <a
+            href="/contectme"
+            className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-900 hover:shadow-blue-400 transition-all"
+          >
+            Contact Me
+          </a>
         </motion.div>
+
       </div>
     </div>
   );
