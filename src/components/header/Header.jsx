@@ -7,7 +7,7 @@ export default function Header() {
   const navLinks = ["", "Skills", "Projects", "Resume", "About"];
 
   return (
-    <nav className="w-full fixed top-0 left-0 bg-blue-950 shadow-xl z-20">
+    <nav className="w-full fixed top-0 left-0 bg-blue-900 shadow-xl z-20">
       <div className="flex items-center justify-between px-6 md:px-10 min-h-16">
         {/* Logo */}
         <Link to="/">

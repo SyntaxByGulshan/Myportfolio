@@ -8,7 +8,7 @@ export default function Hero() {
     <div
       className="relative min-h-screen flex flex-col md:flex-row-reverse 
                  justify-center items-center text-blue-100 gap-8 px-6 md:px-32
-                 bg-gradient-to-br from-blue-900 via-blue-950 to-black overflow-hidden pt-16"
+                 bg-gradient-to-b from-blue-900 via-blue-950 to-black overflow-hidden pt-16"
     >
       {/* Background Glow Effects */}
       <div className="absolute inset-0 z-0">

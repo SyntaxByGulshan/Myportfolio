@@ -25,7 +25,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-950 via-blue-900 to-blue-950 p-6 md:p-12">
+    <div className="min-h-screen bg-gradient-to-b from-blue-900 via-blue-950 to-black p-6 md:p-12">
       <div className="flex flex-col items-center justify-center gap-6 mt-20 md:mt-24">
         <h1 className="text-4xl  font-bold text-blue-200">
           My Projects

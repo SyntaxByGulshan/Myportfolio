@@ -4,7 +4,7 @@ export default function MyJourney() {
   return (
     <section
       id="my_jurney"
-      className="w-full min-h-screen px-6 pt-24 pb-18 flex justify-center bg-gray-900 text-white"
+      className="w-full min-h-screen px-6 pt-24 pb-18 flex justify-center  text-white bg-gradient-to-b from-blue-900 via-blue-950 to-black"
     >
       <div className="md:px-14">
         <h2 className="text-3xl font-bold mb-12">My Journey</h2>
