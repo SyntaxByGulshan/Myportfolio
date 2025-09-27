@@ -29,7 +29,7 @@ export default function Hero() {
           <img
             className="h-52 w-52 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 
                        object-cover rounded-2xl shadow-2xl border-4 border-blue-400"
-            src="IMG-20250630-WA0082.jpg"
+            src="/IMG-20250630-WA0082.jpg"
             alt="photo"
           />
           {/* Subtle glow */}
