@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 export default function About() {
+  const navigate=useNavigate()
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 md:p-12
                     bg-gradient-to-b from-blue-900 via-blue-950 to-blue-800 text-blue-100">
@@ -50,12 +52,12 @@ export default function About() {
           </div>
 
           {/* Contact Button */}
-          <a
-            href="/contectme"
+          <button
+           onClick={()=>{navigate('/contectme')}}
             className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg shadow-blue-900 hover:shadow-blue-400 transition-all"
           >
             Contact Me
-          </a>
+          </button>
         </motion.div>
 
       </div>

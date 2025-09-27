@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 import Typewriter from "typewriter-effect";
 
 export default function Hero() {
+  const navigate=useNavigate()
   return (
     <div
       className="relative min-h-screen flex flex-col md:flex-row-reverse 
@@ -28,7 +30,7 @@ export default function Hero() {
         >
           <img
             className="h-52 w-52 sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 
-                       object-cover rounded-2xl shadow-2xl border-4 border-blue-400"
+                       object-cover rounded-2xl shadow-2xl border-4 border-blue-950"
             src="/IMG-20250630-WA0082.jpg"
             alt="photo"
           />
@@ -113,10 +115,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <a href="/contectme">
+          
             {" "}
-            <button>Contact Me</button>
-          </a>
+            <button onClick={()=>{
+              navigate('/contectme')
+            }}>Contact Me</button>
+          
         </motion.div>
       </motion.div>
     </div>
