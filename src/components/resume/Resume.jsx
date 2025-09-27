@@ -38,7 +38,7 @@ export default function Resume() {
               onClick={() => window.open("/Gulshan02.pdf", "_blank")}
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-medium shadow-lg transition duration-300"
             >
-              Open Resume (Full Screen)
+              Open Resume
             </button>
           </div>
 
