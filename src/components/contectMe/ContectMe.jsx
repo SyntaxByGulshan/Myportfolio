@@ -17,7 +17,7 @@ export default function ContactMe() {
           Feel free to reach out via email or connect on social media. I’d love to hear from you!
         </p>
         <a
-          href="mailto:your-email@example.com"
+          href="mailto:gul19june@gmailcom"
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-blue-400 transition-all text-sm sm:text-base"
         >
           Send Email
