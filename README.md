@@ -1,8 +1,32 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [View it here](https://coruscating-youtiao-cfad79.netlify.app/)
 
-Currently, two official plugins are available:
+A modern and responsive **Portfolio Website** built using **React**, **React Router DOM**, and the **GitHub API**.  
+This website showcases your **journey**, **skills**, and **projects** — all dynamically and beautifully presented.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🚀 Features
+
+- 🧠 **About Me** – A short introduction highlighting who you are and your goals.  
+- 🧭 **Journey** – Timeline of your learning, education, and professional growth.  
+- 💼 **Projects** – Displays your GitHub repositories dynamically using the **GitHub REST API**.  
+- 🛠️ **Skills** – A visual list of your technical skills and tools you’re proficient with.  
+- 📞 **Contact Me** – A simple form and social media links for easy communication.  
+- 🌙 **Dark/Light Mode** – (Optional) Toggle between light and dark themes.  
+- 📱 **Fully Responsive** – Optimized for desktop, tablet, and mobile users.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category       | Technology                  |
+|----------------|------------------------------|
+| **Frontend**   | React 18                      |
+| **Routing**    | React Router DOM              |
+| **API**        | GitHub REST API               |
+| **Styling**    | Tailwind CSS                  |
+| **Animations** | Framer Motion *(optional)*   |
+| **Deployment** | Netlify / Vercel               |
+
