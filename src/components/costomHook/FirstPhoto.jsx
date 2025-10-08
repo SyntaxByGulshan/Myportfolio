@@ -8,6 +8,7 @@ export default function FirstPhoto() {
                        object-cover rounded-2xl shadow-2xl border border-blue-950"
             src="/firstPhoto.jpg"
             alt="photo"
+            loading='lazy'
           />
     </>
   )

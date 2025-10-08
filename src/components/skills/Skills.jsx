@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 const skills = [
   { logo: Html_logo, name: "HTML", color: "from-orange-400 to-blue-600" },
   { logo: Css_logo, name: "CSS", color: "from-blue-400 to-blue-600" },
-  { logo: Tailwind_logo, name: "Tailwind", color: "from-cyan-400 to-blue-600" },
+  { logo: Tailwind_logo, name: "Tailwind", color: "from-cyan-200 to-blue-600" },
   { logo: Javascript_logo, name: "JavaScript", color: "from-yellow-300 to-blue-600" },
   { logo: React_logo, name: "React", color: "from-sky-300 to-blue-600" },
   { logo: Java_logo, name: "Java", color: "from-red-400 to-blue-600" },

@@ -110,12 +110,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
+          onClick={()=>{
+              navigate('/contectme')
+            }}
         >
           
             {" "}
-            <button onClick={()=>{
-              navigate('/contectme')
-            }}>Contact Me</button>
+            <button >Contact Me</button>
           
         </motion.div>
       </motion.div>
