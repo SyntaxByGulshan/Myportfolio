@@ -2,6 +2,7 @@
   "name": "gulshankumarportfolio",
   "private": true,
   "version": "0.0.0",
+  "description": "My personal portfolio website built with React and Vite.",
   "type": "module",
   "scripts": {
     "dev": "vite",
