@@ -13,6 +13,7 @@ const Projects = () => {
       if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       const data = await response.json();
       setRepos(data);
+      console.log(data)
     } catch (error) {
       console.error("Error fetching repositories:", error);
     } finally {
