@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
           className="md:hidden text-3xl text-blue-100"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+         <GiHamburgerMenu />
         </button>
 
         {/* Desktop Menu */}
