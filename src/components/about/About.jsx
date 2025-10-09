@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import SecondPhoto from "../costomHook/SecondPhoto";
 
 export default function About() {
